@@ -1,0 +1,5 @@
+node_modules
+coverage
+npm-debug.log
+data
+messaging-service.log

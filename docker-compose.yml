@@ -1,0 +1,16 @@
+services:
+  server:
+    container_name: messaging-service-server
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+  mongo:
+    container_name: messaging-service-mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+    command: --quiet
